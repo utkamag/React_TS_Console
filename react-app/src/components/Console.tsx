@@ -16,8 +16,8 @@ const Console: React.FC = () => {
         <ConsoleWrapper>
             <Header color={"green"}>TypeScript Console Project 2022</Header>
             <TextArea width={"100%"} height={"70vh"}></TextArea>
-            <Flex>
-                <Button/>
+            <Flex align={"center"} justify={"flex-end"}>
+                <Button primary background={"white"} color={"black"}/>
             </Flex>
         </ConsoleWrapper>
     );

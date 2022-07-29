@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = (props) => {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 15px;
+      margin-top: 20px;
       font-size: 38px;
       color: ${props => props.color };
     `

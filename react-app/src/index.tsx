@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from "./App";
 import {BrowserRouter} from "react-router-dom";
-import {createGlobalStyle} from "styled-components";
+import {createGlobalStyle, ThemeProvider} from "styled-components";
 
 
 const root = ReactDOM.createRoot(
@@ -19,9 +19,24 @@ const Global = createGlobalStyle`
   }
 `
 
+//Стили и медиа запросы
+
+const theme = {
+    colors: {
+        primary: "white",
+        secondary: "black"
+    },
+    media: {
+        phone: "(max-width: 425px)",
+        tablet: "(max-width: 768px)"
+    }
+}
+
 root.render(
-    <BrowserRouter>
-        <Global/>
-        <App/>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+        <BrowserRouter>
+            <Global/>
+            <App/>
+        </BrowserRouter>
+    </ThemeProvider>
 );

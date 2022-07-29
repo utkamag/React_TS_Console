@@ -13,6 +13,7 @@ const TextArea: React.FC<TextAreaProps> = (props) => {
       width: ${props => props.width};
       height: ${props => props.height};
       background-color: black;
+      margin-top: 10px;
       color: white;
       font-size: 20px;
       resize: none;
