@@ -4,8 +4,16 @@ import Header from "./Header";
 import TextArea from "./TextArea";
 import Button from "./Button";
 import Flex from "./Flex";
+import {useDispatch} from "react-redux";
+
 
 const Console: React.FC = () => {
+
+    const dispatch = useDispatch()
+
+    const onSubmit = () => {
+        console.log('123')
+    }
 
     const ConsoleWrapper = styled.div`
       font-size: 15px;
@@ -19,6 +27,7 @@ const Console: React.FC = () => {
             <Flex align={"center"} justify={"flex-end"}>
                 <Button primary background={"white"} color={"black"}/>
             </Flex>
+
         </ConsoleWrapper>
     );
 };
